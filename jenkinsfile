@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 # sh 'mvn --version'
-                sh 'javac.exe helloJava.java'
+                bat 'javac.exe helloJava.java'
             }
         }
     }
