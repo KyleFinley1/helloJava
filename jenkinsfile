@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 # sh 'mvn --version'
-                bat 'javac.exe helloJava.java'
+                bat 'C:\Program_Files_COTS\Java\jdk1.8.0_191\bin\javac.exe helloJava.java'
             }
         }
     }
