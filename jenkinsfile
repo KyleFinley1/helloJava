@@ -4,23 +4,36 @@
 pipeline {
     agent any
     stages {
+        stage('checkout') {
+            steps {
+				echo "Checking out Declarative ${env.JOB_NAME}"
+            }
+        }
         stage('build') {
             steps {
 				echo "Building Declarative ${env.JOB_NAME}"
                 // sh 'mvn --version'
                 // bat 'C:\Program_Files_COTS\Java\jdk1.8.0_191\bin\javac.exe C:\Program_Files_COTS\Jenkins-2.150.2\workspace\helloJava\helloJava.java'
-                bat 'C:\Program_Files_COTS\Java\jdk1.8.0_191\bin\javac.exe %WORKSPACE%\helloJava.java'
+				// bat "C:\Program_Files_COTS\Java\jdk1.8.0_191\bin\javac.exe %WORKSPACE%\\helloJava.java"
+				bat "build.bat"
             }
         }
     }
+
+//    post {
+//        failure {
+//            echo "${env.JOB_NAME} pipeline failed :("
+//          // Needs SMTP port 25 available
+//			mail to: 'Kyle.Finley@LinQuest.com',
+//				subject: "${env.JOB_NAME} pipeline failed :(",
+//				body: "Something is wrong with ${env.BUILD_URL}"
+//        }
+//    }
 }
 
 // Jenkinsfile (Scripted Pipeline)
-node {
-    stage('build2') {
-        steps {
-			echo "Building Scripted ${env.JOB_NAME}"
-            bat "javac %WORKSPACE%\helloJava.java"
-        }
-    }
-}
+//node {
+//    stage('build2') {
+//			echo "Building Scripted ${env.JOB_NAME}"
+//    }
+//}
