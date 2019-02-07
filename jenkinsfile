@@ -15,7 +15,7 @@ pipeline {
                 // sh 'mvn --version'
                 // bat 'C:\Program_Files_COTS\Java\jdk1.8.0_191\bin\javac.exe C:\Program_Files_COTS\Jenkins-2.150.2\workspace\helloJava\helloJava.java'
 				// bat "C:\Program_Files_COTS\Java\jdk1.8.0_191\bin\javac.exe %WORKSPACE%\\helloJava.java"
-				bat "build.bat"
+				// bat "build.bat"
             }
         }
     }
@@ -23,7 +23,7 @@ pipeline {
 //    post {
 //        failure {
 //            echo "${env.JOB_NAME} pipeline failed :("
-//          // Needs SMTP port 25 available
+//          // Needs SMTP port 25 available!
 //			mail to: 'Kyle.Finley@LinQuest.com',
 //				subject: "${env.JOB_NAME} pipeline failed :(",
 //				body: "Something is wrong with ${env.BUILD_URL}"
