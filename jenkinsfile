@@ -1,10 +1,13 @@
+#!/usr/bin/env groovy 
+# Jenkinsfile (Declarative Pipeline)
+
 pipeline {
     agent any
     stages {
         stage('build') {
             steps {
                 # sh 'mvn --version'
-                bat 'C:\Program_Files_COTS\Java\jdk1.8.0_191\bin\javac.exe helloJava.java'
+                bat 'javac.exe C:\Program_Files_COTS\Jenkins-2.150.2\workspace\hello_plus\helloJava.java'
             }
         }
     }
