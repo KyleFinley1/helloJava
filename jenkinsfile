@@ -7,7 +7,6 @@ pipeline {
         stage('checkout') {
             steps {
 				echo "Checking out Declarative ${env.JOB_NAME}"
-				git branch: 'master', credentialsId: 'KyleFinley1', url: "https://github.com/KyleFinley1/helloJava.git"
             }
         }
         stage('build') {
@@ -24,7 +23,7 @@ pipeline {
 //    post {
 //        failure {
 //            echo "${env.JOB_NAME} pipeline failed :("
-//          // Needs SMTP port 25 available!
+//          // Needs SMTP port 25 available or Jenkins SMTP server assigned smtp.linquest.com
 //			mail to: 'Kyle.Finley@LinQuest.com',
 //				subject: "${env.JOB_NAME} pipeline failed :(",
 //				body: "Something is wrong with ${env.BUILD_URL}"
