@@ -7,6 +7,7 @@ pipeline {
         stage('checkout') {
             steps {
 				echo "Checking out Declarative ${env.JOB_NAME}"
+				git branch: 'master', credentialsId: 'KyleFinley1', url: "https://github.com/KyleFinley1/helloJava.git"
             }
         }
         stage('build') {
