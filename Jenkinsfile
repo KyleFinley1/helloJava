@@ -16,7 +16,7 @@ pipeline {
 				// ssh (Jenkins CLI)
 				// JENKINS_SSHD_PORT=[sshd port on master]
 				// JENKINS_HOSTNAME=[Jenkins master hostname]
-				bat 'ssh -p $JENKINS_SSHD_PORT $JENKINS_HOSTNAME declarative-linter < Jenkinsfile'
+				bat 'C:\\Windows\\system32\\ssh.exe -p $JENKINS_SSHD_PORT $JENKINS_HOSTNAME declarative-linter < Jenkinsfile'
             }
         }
         stage('build') {
