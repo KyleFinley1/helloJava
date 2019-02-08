@@ -10,15 +10,16 @@ pipeline {
 //				git branch: 'master', credentialsId: 'KyleFinley1', url: "https://github.com/KyleFinley1/helloJava.git"
 //            }
 //        }
-        stage('linter') {
-            steps {
-				echo "Linting Jenkinsfile"
-				// ssh (Jenkins CLI)
-				// JENKINS_SSHD_PORT=[sshd port on master]
-				// JENKINS_HOSTNAME=[Jenkins master hostname]
-				bat 'C:\\Windows\\system32\\OpenSSH\\ssh.exe -p $JENKINS_SSHD_PORT $JENKINS_HOSTNAME declarative-linter < %WORKSPACE%\\Jenkinsfile'
-            }
-        }
+
+//        stage('linter') {
+//            steps {
+//				echo "Linting Jenkinsfile"
+//				// ssh (Jenkins CLI)
+//				// JENKINS_SSHD_PORT=[sshd port on master]
+//				// JENKINS_HOSTNAME=[Jenkins master hostname]
+//				bat 'C:\\Windows\\system32\\OpenSSH\\ssh.exe -p $JENKINS_SSHD_PORT $JENKINS_HOSTNAME declarative-linter < %WORKSPACE%\\Jenkinsfile'
+//            }
+//        }
         stage('build') {
             steps {
 				echo "Building Declarative ${env.JOB_NAME}"
