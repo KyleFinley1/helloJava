@@ -13,9 +13,9 @@ pipeline {
         stage('linter') {
             steps {
 				echo "Linting Jenkinsfile"
-				# ssh (Jenkins CLI)
-				# JENKINS_SSHD_PORT=[sshd port on master]
-				# JENKINS_HOSTNAME=[Jenkins master hostname]
+				// ssh (Jenkins CLI)
+				// JENKINS_SSHD_PORT=[sshd port on master]
+				// JENKINS_HOSTNAME=[Jenkins master hostname]
 				bat 'ssh -p $JENKINS_SSHD_PORT $JENKINS_HOSTNAME declarative-linter < Jenkinsfile'
             }
         }
