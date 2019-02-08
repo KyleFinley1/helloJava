@@ -17,7 +17,9 @@ pipeline {
                 // bat 'C:\Program_Files_COTS\Java\jdk1.8.0_191\bin\javac.exe C:\Program_Files_COTS\Jenkins-2.150.2\workspace\helloJava\helloJava.java'
 				// bat 'set JAVA_HOME=C:\\Program_Files_COTS\\Java\\jdk1.8.0_191\\bin\\'
 				// bat "%JAVA_HOME%javac.exe %WORKSPACE%\\helloJava.java"
-				bat "build.bat"
+
+                bat 'C:\Program_Files_COTS\Java\jdk1.8.0_191\bin\javac.exe %WORKSPACE%\\helloJava.java'
+				// bat "build.bat"
             }
         }
     }
