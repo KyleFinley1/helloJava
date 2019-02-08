@@ -18,7 +18,7 @@ pipeline {
 				// bat 'set JAVA_HOME=C:\\Program_Files_COTS\\Java\\jdk1.8.0_191\\bin\\'
 				// bat "%JAVA_HOME%javac.exe %WORKSPACE%\\helloJava.java"
 
-                bat 'C:\Program_Files_COTS\Java\jdk1.8.0_191\bin\javac.exe %WORKSPACE%\\helloJava.java'
+                bat 'C:\\Program_Files_COTS\\Java\\jdk1.8.0_191\\bin\\javac.exe %WORKSPACE%\\helloJava.java'
 				// bat "build.bat"
             }
         }
